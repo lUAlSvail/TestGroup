@@ -22,7 +22,7 @@ public class MainClassTest {
     }
     @Test
     public void searchTyres(){
-        mainPage.typeKBA("adadasd");
+        mainPage.typeKBA("adadasdі");
         mainPage.setAllDimension("215","40","17");
         String name = driver.getTitle();
 
