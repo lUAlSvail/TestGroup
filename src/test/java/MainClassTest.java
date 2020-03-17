@@ -13,7 +13,7 @@ public class MainClassTest {
 
     @Before
     public void setUp(){
-        System.setProperty("webdriver.gecko.driver", "/home/svail/IdeaProjects/TestGroup/drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\svail\\IdeaProjects\\TestGroup\\drivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -22,7 +22,7 @@ public class MainClassTest {
     }
     @Test
     public void searchTyres(){
-        mainPage.typeKBA("adadasdі");
+        mainPage.closeCookies();
         mainPage.setAllDimension("215","40","17");
         String name = driver.getTitle();
 
