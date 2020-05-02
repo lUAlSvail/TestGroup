@@ -42,6 +42,11 @@ public class MainPage {
         return this;
     }
 
+    public MainPage closeCookies(){
+        driver.findElement(By.xpath("//div[@class=\"block-cookies__close\"]")).click();
+        return this;
+    }
+
     public SizeTyresListing SearchTyreSize(){
         driver.findElement(searchButtonTyres).click();
         return new SizeTyresListing(driver);
