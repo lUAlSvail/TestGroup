@@ -6,4 +6,5 @@ public class CarTyresListing {
     public CarTyresListing(WebDriver driver) {
         this.driver = driver;
     }
+
 }

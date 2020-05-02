@@ -27,6 +27,20 @@ public class MainPage {
     private By tyreDiameter = By.cssSelector("select#form_Size");
     private String tyreValueSize = "//select[@id=\"%s\"]//option[@value=\"%s\"]";
     private String carValue = "//option[text()=\"%s\"]";
+    private By cookie = By.xpath("//div[@class=\"block-cookies__close\"]");
+    private By sizeDisplay = By.xpath("//option[@value=\"205\"][@selected=\"selected\"]");
+
+    public MainPage IsDisplayed(){
+        if (driver.findElement(sizeDisplay).isDisplayed()){
+            System.out.println("displayed"); }
+        else {
+            System.out.println("not displayed");}
+        return this;
+    }
+    public MainPage CloseCookies(){
+        driver.findElement(cookie).click();
+        return this;
+    }
 
     public SizeTyresListing SearchTyreSize(){
         driver.findElement(searchButtonTyres).click();
